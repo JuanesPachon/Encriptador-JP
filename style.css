@@ -182,4 +182,18 @@ body {
     }
 }
 
+/* Estilo texto ya encriptado */
 
+.texto-encriptado,
+.texto-vacio {
+    color: #0f3058;
+    font-size: 2.4rem;
+    padding: 2rem 4rem;
+    padding-right: 2rem;
+    text-align: left;
+}
+
+.texto-vacio {
+     text-align: center;
+     padding-right: 4rem;
+}
