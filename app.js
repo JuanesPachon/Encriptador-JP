@@ -16,11 +16,24 @@ function encriptar() {
 
             muestra.innerHTML = textoCifrado;
             muestra.classList.add("texto-encriptado")
-    } else {
-        muestra.innerHTML = "Ingresa el texto que desees encriptar o desencriptar.";
-        muestra.classList.add("texto-vacio")
-    }
-}
+
+
+            let botonCopiar = document.createElement("button");
+            botonCopiar.textContent = "Copiar";
+            muestra.appendChild(botonCopiar)
+            botonCopiar.classList.add("boton-copiar")
+
+            botonCopiar.addEventListener("click", function () {
+                
+                let textoCopiado = textoCifrado;
+                navigator.clipboard.writeText(textoCopiado).then(function () {
+                ;
+                }).catch(function (err) {
+                    console.error('Error al copiar al portapapeles: ', err);
+                });
+            });
+        }
+    }        
 
 function desencriptar() {
     let texto = document.querySelector(".campo__texto").value;
@@ -39,8 +52,20 @@ function desencriptar() {
 
             muestra.innerHTML = textoCifrado;
             muestra.classList.add("texto-encriptado")
-    } else {
-        muestra.innerHTML = "Ingresa el texto que desees encriptar o desencriptar.";
-        muestra.classList.add("texto-vacio")
+
+            botonCopiar = document.createElement("button");
+            botonCopiar.textContent = "Copiar";
+            muestra.appendChild(botonCopiar)
+            botonCopiar.classList.add("boton-copiar")
+
+            botonCopiar.addEventListener("click", function () {
+                
+                let textoCopiado = textoCifrado;
+                navigator.clipboard.writeText(textoCopiado).then(function () {
+                ;
+                }).catch(function (err) {
+                    console.error('Error al copiar al portapapeles: ', err);
+                });
+            });
     }
 }
