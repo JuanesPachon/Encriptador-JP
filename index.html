@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="assets/img/TopIcono.ico" as="icon">
+    <link rel="shortcut icon" href="assets/img/TopIcono.ico">
+    <title>Encriptador Alura</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="navbar">
+            <a class="logo" href="index.html"> <img src="assets/img/TopIcono.png" alt="Logo-principal"></a>
+        </div>
+    </header>
+
+    <main class="principal">   <!-- Texto - Botones - Mensaje Encriptado  -->
+
+        <div>
+            <div class="campo">
+                <textarea class="campo__texto" type="text" placeholder="Ingrese el texto aqui" rows="8"></textarea>
+            </div>
+
+            <div class="aviso">
+                <img class="aviso__icono" src="assets/img/exclamation.png" alt="Aviso">
+                <p class="aviso__texto">Solo letras minúsculas y sin acentos</p>
+            </div>
+
+            <div class="interaccion">
+                <a class="interaccion__boton interaccion__boton--uno" href="#">Encriptar</a>
+                <a class="interaccion__boton interaccion__boton--dos" href="#">Desencriptar</a>
+            </div>
+        </div>
+        <aside class="sidebar-mensaje">
+            <div class="mensaje-encriptado">
+                <div class="encriptado-contenido">
+                    <img class="encriptado__imagen" src="assets/img/Muñeco.png" alt="Icono-mensaje-vacio">
+                    <p class="encriptado__texto-1">Ningún mensaje fue encontrado</p>
+                    <p class="encriptado__texto-2">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+</body>
+
+</html>
