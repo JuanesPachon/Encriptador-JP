@@ -9,7 +9,7 @@
 - **JavaScript**
 
 ## Uso 🚀
-1. Accede a la [Encriptador de Texto JP](enlace_al_github_pages).
+1. Accede a la [Encriptador de Texto JP]([enlace_al_github_pages](https://juaneshvh.github.io/Encriptador-JP/)).
 2. Ingresa tu texto en el área designada.
 3. Haz clic en el botón "Encriptar".
 4. Observa cómo tu texto se cifra y aparece en la otra área.
