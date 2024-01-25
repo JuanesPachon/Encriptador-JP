@@ -29,5 +29,8 @@ Este proyecto no tiene una licencia específica. Si decides compartirlo o modifi
 
 ## Notas Adicionales ℹ️
 - Siéntete libre de contactarme para compartir tus ideas o mejoras.
-- Puedes encontrar los archivos del proyecto en la carpeta "src".
+- Puedes encontrar los archivos del proyecto en la carpeta "assets".
+
+## Oracle One challenge!!
+#challengeonecodificador6
 
