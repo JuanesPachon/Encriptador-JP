@@ -6,32 +6,44 @@ function encriptar() {
 
     if (texto.trim() !== "") {
 
-        let textoCifrado = texto
-            .replace(/e/gi, "enter")
-            .replace(/i/gi, "imes")
-            .replace(/a/gi, "ai")
-            .replace(/o/gi, "ober")
-            .replace(/u/gi, "ufat");
+        let advertencia = document.createElement("p");
+        let aviso = document.querySelector(".aviso")
+
+        if(/[A-Z]/.test(texto) || /[!@#$%^&*()_+{}\[\]:áéíóúüñÁÉÍÓÚÜÑ;<>,.?~\\/-]/.test(texto)){
+            advertencia.textContent = "Solo son admitidas minisculas y sin acentos."
+            aviso.appendChild(advertencia)
+            advertencia.classList.add("error-aviso")
+        }else {
 
 
-            muestra.innerHTML = textoCifrado;
-            muestra.classList.add("texto-encriptado")
+
+            let textoCifrado = texto
+                .replace(/e/gi, "enter")
+                .replace(/i/gi, "imes")
+                .replace(/a/gi, "ai")
+                .replace(/o/gi, "ober")
+                .replace(/u/gi, "ufat");
 
 
-            let botonCopiar = document.createElement("button");
-            botonCopiar.textContent = "Copiar";
-            muestra.appendChild(botonCopiar)
-            botonCopiar.classList.add("boton-copiar")
+                muestra.innerHTML = textoCifrado;
+                muestra.classList.add("texto-encriptado")
 
-            botonCopiar.addEventListener("click", function () {
-                
-                let textoCopiado = textoCifrado;
-                navigator.clipboard.writeText(textoCopiado).then(function () {
-                ;
-                }).catch(function (err) {
-                    console.error('Error al copiar al portapapeles: ', err);
+
+                let botonCopiar = document.createElement("button");
+                botonCopiar.textContent = "Copiar";
+                muestra.appendChild(botonCopiar)
+                botonCopiar.classList.add("boton-copiar")
+
+                botonCopiar.addEventListener("click", function () {
+                    
+                    let textoCopiado = textoCifrado;
+                    navigator.clipboard.writeText(textoCopiado).then(function () {
+                    ;
+                    }).catch(function (err) {
+                        console.error('Error al copiar al portapapeles: ', err);
+                    });
                 });
-            });
+            }
         }
     }        
 
