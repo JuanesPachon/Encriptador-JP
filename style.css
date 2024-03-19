@@ -10,10 +10,61 @@ html {
 body {
     margin: 0;
     background-color: #d8dff5;
+    transition: background-color 0.5s ease;
 
     @media (min-width: 767px) {
          margin: 0 2rem;
     }
+}
+
+/* Dark mode */
+
+.dark-mode{
+    background-color: #0c2748;
+    color: #d8dff5;
+}
+
+.dark-mode .header {
+    background-color: #1f3858;
+}
+
+.dark-mode .campo__texto {
+    color: #bac0d5;
+    background-color: #0c2748;
+}
+
+.dark-mode .campo__texto::placeholder {
+    color: #bac0d5;
+}
+
+.darkmode .interaccion__boton--encriptar {
+    background-color: #c8cddd;
+    color: #bac0d5;
+}
+
+.dark-mode .interaccion__boton--desencriptar {
+    color: #c8cddd;
+    border-color: #c8cddd;
+}
+
+.dark-mode .mensaje-encriptado {
+    background-color: #284264;
+    color: #c8cddd;
+}
+
+.darkmode .encriptado__texto-2 {
+    color: #cbd2e9;
+}
+
+.dark-mode .boton-copiar {
+    background-color: #d8dff5;
+    color: #0c2748;
+}
+
+
+.dark-mode #theme-toggle {
+    background-color: #bac0d5;
+    color: #0c2748;
 }
 
 /* Header */
@@ -23,11 +74,33 @@ body {
     position: sticky;
     top: 0;
     background-color: #d8dff5;
+    border-radius: 10px;
+    transition: background-color 0.5s ease;
 }
 
 .navbar {
     padding: 1.5rem 0 1rem 1.4rem;
     border-bottom: solid .1rem #0A3871;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+}
+
+.dark-logo {
+    display: none;
+    height: auto;
+    width: 70px;
+}
+
+#theme-toggle {
+    background-color: #0A3871;
+    border-radius: 17px;
+    border: none;
+    color: #cbd2e9;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 20px;
+    width: 150px;
 }
 
 /* Campo de texto */
@@ -48,6 +121,7 @@ body {
     outline: none;
     background-color: #d8dff5;
     resize: none;
+    transition: background-color 0.5s ease;
 
     @media (min-width: 767px) {
         margin-top: 3rem; 
@@ -62,8 +136,7 @@ body {
 
 .campo__texto::placeholder {
     color: #0A3871;
-    
-    
+    transition: color 0.5s ease;
 }
 
 .aviso-predeterminado {
@@ -117,6 +190,7 @@ body {
 .interaccion__boton--encriptar {
     background-color: #0A3871;
     color: white;
+    transition: background-color 0.5s ease;
 }
 
 .interaccion__boton--encriptar:hover{
@@ -131,6 +205,7 @@ body {
     border: #0A3871 .1rem solid;
     color: #0A3871;
     margin-bottom: 1rem;
+    transition: background-color 0.5s ease;
 }
 
 .interaccion__boton--desencriptar:hover {
@@ -154,6 +229,7 @@ body {
     overflow: visible;
     max-height: none;
     position: relative;
+    transition: background-color 0.5s ease;
 
 }
 
@@ -180,6 +256,7 @@ body {
     font-size: 1.2rem;
     padding: 0 .8rem;
     color: rgb(103, 102, 102);
+    transition: background-color 0.5s ease;
 }
 
 /* Principal Responsive: Desktop */

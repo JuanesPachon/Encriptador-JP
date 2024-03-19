@@ -1,3 +1,33 @@
+// Dark mode
+
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+const lightLogo = document.querySelector(".light-logo");
+const darkLogo = document.querySelector(".dark-logo");
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    toggleLogo();
+});
+
+function toggleLogo() {
+    const isDarkMode = body.classList.contains('dark-mode');
+    if (isDarkMode) {
+        lightLogo.style.display = 'none';
+        darkLogo.style.display = 'inline-block';
+    } else {
+        lightLogo.style.display = 'inline';
+        darkLogo.style.display = 'none';
+    }
+
+    if (isDarkMode) {
+        themeToggle.textContent = "Light mode"
+    } else {
+        themeToggle.textContent = "Dark mode"
+    }
+}
+
+
 function encriptar() {
 
     let texto = document.querySelector(".campo__texto").value;
@@ -7,12 +37,12 @@ function encriptar() {
     if (texto.trim() !== "") {
 
         let advertencia = document.createElement("p");
-        let aviso = document.querySelector(".aviso")
+        let aviso = document.querySelector(".aviso");
 
         if(/[A-Z]/.test(texto) || /[!@#$%^&*()_+{}\[\]:áéíóúüñÁÉÍÓÚÜÑ;<>,.?~\\/-]/.test(texto)){
-            advertencia.textContent = "Solo son admitidas minisculas y sin acentos."
-            aviso.appendChild(advertencia)
-            advertencia.classList.add("error-aviso")
+            advertencia.textContent = "Solo son admitidas minisculas y sin acentos.";
+            aviso.appendChild(advertencia);
+            advertencia.classList.add("error-aviso");
         }else {
 
 
@@ -26,13 +56,13 @@ function encriptar() {
 
 
                 muestra.innerHTML = textoCifrado;
-                muestra.classList.add("texto-encriptado")
+                muestra.classList.add("texto-encriptado");
 
 
                 let botonCopiar = document.createElement("button");
                 botonCopiar.textContent = "Copiar";
-                muestra.appendChild(botonCopiar)
-                botonCopiar.classList.add("boton-copiar")
+                muestra.appendChild(botonCopiar);
+                botonCopiar.classList.add("boton-copiar");
 
                 botonCopiar.addEventListener("click", function () {
                     
@@ -63,12 +93,12 @@ function desencriptar() {
 
 
             muestra.innerHTML = textoCifrado;
-            muestra.classList.add("texto-encriptado")
+            muestra.classList.add("texto-encriptado");
 
             botonCopiar = document.createElement("button");
             botonCopiar.textContent = "Copiar";
-            muestra.appendChild(botonCopiar)
-            botonCopiar.classList.add("boton-copiar")
+            muestra.appendChild(botonCopiar);
+            botonCopiar.classList.add("boton-copiar");
 
             botonCopiar.addEventListener("click", function () {
                 
